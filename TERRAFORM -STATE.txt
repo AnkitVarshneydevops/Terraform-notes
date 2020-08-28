@@ -1,0 +1,12 @@
+if you are creating any infrastructure into cloud platform using terraform, 
+whatever infrastructure you are creating, all the resources are recorded by 
+the terraform on your local laptop, that's why it is called local states, 
+since you can run a terraform from your local laptop to make the changes 
+into your cloud, if I want to provision s3 bucket, vpc or any of the 
+resources of our aws cloud, I can run the terraform code from our local laptop, 
+whenever we are going to run the terraform code and when we are running 
+command that terraform plan or apply, it's created state file for us on 
+same directory when you are running terraform code and whatever the 
+resources you have created, all the resources recorded inside the particular terraform state file.
+== terraform state is used to do the modification, 
+or any kind of updation or deletion, if you want to do in your running infrastructure which is created by terraform scripts.
