@@ -1,6 +1,18 @@
+Terraform Provider
+====================
+
 A provider is responsible for understanding API interactions and exposing resources. 
 It means if you are provisioning any resources on any cloud infrastructure or physical hosts, 
 terraform need to be provision the resources on behalf of you to interact with the service provider like aws, azure etc. 
 To access those resources on behalf of you it require name of provider, 
 it's like why we need to provision the infrastructure on GCP or aws etc. 
 That is need to provider aws.
+
+= The template provider can help creating customized configuration files.
+= You can build templates based on variables from terraform resource attributes(e.g. a public IP address)
+= The result is a string that can be used as a variable in terraform.
+  The string contains a template e.g. configuration file.
+  Can be used to create generic templates or cloud init configs
+In AWS, you can pass commands that need to be executed when the instance starts for the first time.
+In AWS, this is called "user-data"
+If you want to pass user-data that depends on other information in terraform (e.g. IP addresses), you can use the provider template.
