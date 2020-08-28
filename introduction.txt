@@ -1,0 +1,14 @@
+Terraform allows to write Infrastructure as code. Just imagine our customer of a cloud provider and you want to spin up some machines, you can either going into web console, and you just start launching some new instances but you have to do it manually, you always have to go to few forms, click some buttons and then you can launch instances. Terraform allows to do same thing but then in codes.
+== it is automates the infrastructure.
+== Terraform keeps your infrastructure in a certain state, it keeps compliant. you define in the code, the state of the infrastructure for example, you want to spin up 5 small instances and whenever you run terraform, it will ensure those 5 instances are running on your cloud platform, even if you change manually something, terraform will try to match the code with actual infrastructure. for example, you have 2 web instances with 2 volumes, and 1 load balancer. this is what you put in your code, the terraform will allow 2 web instances with 2 volumes and 1 load balancer. if one of those web instances gets deleted then terraform will make sure that whenever you run it next the second web instances is against spin up to match the state of your infrastructure.
+It make your infrastructure auditable, just by looking at those terraform files, you see what infrastructure is made of, and you can better to keep the changes. you keep your infrastructure change history in version control system like git or subversion, that means the average change that you make to your infrastructure, you can find trail or audittrail in your version control system.
+Ansible,Chef,Puppet, Saltstack have a focus on automating the installation and configuration of software. keeping the machines in compliance, in a certain state.
+Terraform can automate provisioning of the infrastructure itself, eg using the AWS, DigitalOcean, Azure API.
+it works well with automation software like ansible to install software after the infrastructure is provisioned.
+
+terraform apply 
+terraform plan== we just have a look a terraform file and it will show you it planning to do without applying to your infrastructure.
+
+terraform plan -out out.terraform # -out=output
+
+terraform apply is a shortcut of = terraform plan -out file; terraform apply file; rm file
