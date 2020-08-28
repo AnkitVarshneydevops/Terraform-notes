@@ -1,0 +1,6 @@
+A provider is responsible for understanding API interactions and exposing resources. 
+It means if you are provisioning any resources on any cloud infrastructure or physical hosts, 
+terraform need to be provision the resources on behalf of you to interact with the service provider like aws, azure etc. 
+To access those resources on behalf of you it require name of provider, 
+it's like why we need to provision the infrastructure on GCP or aws etc. 
+That is need to provider aws.
