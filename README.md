@@ -19,5 +19,6 @@ terraform refresh:- if you want to refresh the remote state. It going to look re
 terraform fmt <filename>: if you want change format of a file into standard format ( 2 spaces).
 
 terraform import: import the exist infrastructure into terraform.tfstate.
+
 For example: if the information of aws_instance such as id, ami, AZ etc is delete in  terraform.tfstate file. Then if you want to run  terraform plan, its plan to create a new instance because it does not know about existing instance. it does not have aws_instance in local tfstate file. Therefore terraform import comes in.
 terraform import aws_instance.example <instance-id> . You can find instance-id in AWS Management console.
