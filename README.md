@@ -16,7 +16,7 @@ we can generate a nice png using tools that can interpreted by program called Gr
 
 **terraform refresh:-** if you want to refresh the remote state. It going to look remote state at terraform state locally.
 
-**terraform fmt **<filename>:** if you want change format of a file into standard format ( 2 spaces).
+##terraform fmt <filename>: if you want change format of a file into standard format ( 2 spaces).
 
 **terraform import:** import the exist infrastructure into terraform.tfstate.
 
