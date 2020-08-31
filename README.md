@@ -6,8 +6,8 @@ By default terraform.tfstate file are in json format. If you want to get in more
 **terraform show | grep public_ip**
 
 let say aws_instance, I know that something wrong in it. I want to have recreated, so if I do terraform plan, it going to compare the remote state with my local state, as there nothing to do, it is not recreated aws_instances. If I want to recreate this aws_instance. I am going to
-use command: terraform taint aws_instance.example then output is “The resource aws
-_instance.example in the module root has been marked as tainted!”. So even now terraform plan, it is recreate aws_instance and also recreate volume attach with aws_instance because of creating new instance.
+use command: terraform taint aws_instance.example then output is **“The resource aws
+_instance.example in the module root has been marked as tainted!”**. So even now **terraform plan**, it is recreate aws_instance and also recreate volume attach with aws_instance because of creating new instance.
 
 **terraform untaint aws_instance.example**
 
